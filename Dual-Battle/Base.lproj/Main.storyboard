@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="478" id="edi-8V-Hnh"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="pxs-XK-tMC" userLabel="player2-soldier">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="pxs-XK-tMC" userLabel="player2-soldier">
                                 <rect key="frame" x="252" y="285" width="371" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="371" id="Qgf-5X-yhH"/>
@@ -48,7 +48,7 @@
                                     <constraint firstAttribute="width" constant="340" id="xi8-Bs-FxR"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-Q2-P05" userLabel="player1-orc">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Y4w-Q2-P05" userLabel="player1-orc">
                                 <rect key="frame" x="-19" y="311" width="340" height="189"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="189" id="Vp6-Ik-YQ5"/>
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="height" constant="214" id="dDg-tY-IzR"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-aw-hL3" userLabel="player1-attack">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftd-aw-hL3" userLabel="player1-attack">
                                 <rect key="frame" x="81" y="214" width="140" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="7JS-CF-nem"/>
@@ -70,7 +70,7 @@
                                 </constraints>
                                 <state key="normal" image="player1attackbtn"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCu-gW-vHg" userLabel="player2-attack">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCu-gW-vHg" userLabel="player2-attack">
                                 <rect key="frame" x="379" y="214" width="140" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="6tB-EX-hZJ"/>
@@ -78,36 +78,57 @@
                                 </constraints>
                                 <state key="normal" image="player2attackbtn"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-wa-TDp" userLabel="player1-ATTACK-lbl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-wa-TDp" userLabel="player1-ATTACK-lbl">
                                 <rect key="frame" x="108" y="229" width="86" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzS-v4-m2V" userLabel="player2-ATTACK-lbl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzS-v4-m2V" userLabel="player2-ATTACK-lbl">
                                 <rect key="frame" x="406" y="229" width="86" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="265-4p-cHz" userLabel="info-text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1, choose a character." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="265-4p-cHz" userLabel="info-text">
                                 <rect key="frame" x="108" y="528" width="384" height="52"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="52 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVk-Vg-Rj2" userLabel="player1HpLbl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="52 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVk-Vg-Rj2" userLabel="player1HpLbl">
                                 <rect key="frame" x="198" y="332" width="73" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.13725490200000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="52 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX6-ID-IWp" userLabel="player2HpLbl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="52 HP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IX6-ID-IWp" userLabel="player2HpLbl">
                                 <rect key="frame" x="308" y="332" width="73" height="21"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <color key="textColor" red="0.96078431369999995" green="0.13725490200000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lPb-Zm-JRp">
+                                <rect key="frame" x="202" y="181" width="209" height="117"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvL-ma-A6a" userLabel="selectOrcBtn">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="nGd-Xj-5pj"/>
+                                            <constraint firstAttribute="height" constant="117" id="tih-Tu-Sgr"/>
+                                        </constraints>
+                                        <state key="normal" image="enemy"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qL-tq-nXe" userLabel="selectSoldierBtn">
+                                        <rect key="frame" x="90" y="0.0" width="119" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="131" id="ZDM-ds-YCd"/>
+                                            <constraint firstAttribute="width" constant="119" id="cDg-0t-xpr"/>
+                                        </constraints>
+                                        <state key="normal" image="player-flipped"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -116,6 +137,7 @@
                             <constraint firstItem="WSA-WL-k2d" firstAttribute="top" secondItem="ftd-aw-hL3" secondAttribute="bottom" constant="-15" id="2gc-G5-Egj"/>
                             <constraint firstItem="3OC-wa-TDp" firstAttribute="centerX" secondItem="ftd-aw-hL3" secondAttribute="centerX" id="4yN-mO-TAN"/>
                             <constraint firstItem="4yc-Xd-hi7" firstAttribute="centerX" secondItem="pxs-XK-tMC" secondAttribute="centerX" id="5Eg-FJ-VwQ"/>
+                            <constraint firstItem="lPb-Zm-JRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="13" id="5Q7-kE-vgq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kwG-aV-Kpn" secondAttribute="bottom" id="BYi-2S-WYS"/>
                             <constraint firstItem="GzS-v4-m2V" firstAttribute="centerY" secondItem="ZCu-gW-vHg" secondAttribute="centerY" id="C9n-4Q-7Sg"/>
                             <constraint firstItem="kwG-aV-Kpn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CuX-ZN-jBq"/>
@@ -131,6 +153,7 @@
                             <constraint firstItem="ymZ-uS-6fa" firstAttribute="top" secondItem="WSA-WL-k2d" secondAttribute="bottom" constant="13" id="WfJ-fP-dPi"/>
                             <constraint firstItem="ymZ-uS-6fa" firstAttribute="centerY" secondItem="kwG-aV-Kpn" secondAttribute="centerY" id="XvW-zS-fBv"/>
                             <constraint firstItem="ZCu-gW-vHg" firstAttribute="centerY" secondItem="ftd-aw-hL3" secondAttribute="centerY" id="Y7R-iN-ptn"/>
+                            <constraint firstItem="WSA-WL-k2d" firstAttribute="top" secondItem="lPb-Zm-JRp" secondAttribute="bottom" constant="-135" id="YbU-KE-QZa"/>
                             <constraint firstItem="kwG-aV-Kpn" firstAttribute="top" secondItem="WSA-WL-k2d" secondAttribute="bottom" id="eBJ-ma-uR9"/>
                             <constraint firstItem="265-4p-cHz" firstAttribute="centerX" secondItem="ymZ-uS-6fa" secondAttribute="centerX" id="eDh-21-DuY"/>
                             <constraint firstItem="mqN-Zv-StP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fez-8V-wgW"/>
