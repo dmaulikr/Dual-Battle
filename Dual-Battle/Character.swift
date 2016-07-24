@@ -11,7 +11,9 @@ import Foundation
 class Character {
     private var _HP: Int = 0
     private var _attackPwr: Int = 0
-    private var _name: String = "Player 1"
+    private var _name: String = ""
+    
+    var type: String = ""
     
     var HP: Int {
         get {

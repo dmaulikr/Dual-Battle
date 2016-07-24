@@ -90,7 +90,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1, choose a character." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="265-4p-cHz" userLabel="info-text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player 1, select a character." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="265-4p-cHz" userLabel="info-text">
                                 <rect key="frame" x="108" y="528" width="384" height="52"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,6 +118,9 @@
                                             <constraint firstAttribute="height" constant="117" id="tih-Tu-Sgr"/>
                                         </constraints>
                                         <state key="normal" image="enemy"/>
+                                        <connections>
+                                            <action selector="onOrcSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DIC-9r-1yJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qL-tq-nXe" userLabel="selectSoldierBtn">
                                         <rect key="frame" x="90" y="0.0" width="119" height="117"/>
@@ -126,6 +129,9 @@
                                             <constraint firstAttribute="width" constant="119" id="cDg-0t-xpr"/>
                                         </constraints>
                                         <state key="normal" image="player-flipped"/>
+                                        <connections>
+                                            <action selector="onSoldierSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d51-KQ-Ro7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -158,7 +164,7 @@
                             <constraint firstItem="265-4p-cHz" firstAttribute="centerX" secondItem="ymZ-uS-6fa" secondAttribute="centerX" id="eDh-21-DuY"/>
                             <constraint firstItem="mqN-Zv-StP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fez-8V-wgW"/>
                             <constraint firstItem="WSA-WL-k2d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-10" id="gYS-HQ-h0R"/>
-                            <constraint firstAttribute="trailing" secondItem="IX6-ID-IWp" secondAttribute="trailing" constant="170" id="hUz-qi-1ql"/>
+                            <constraint firstAttribute="trailing" secondItem="IX6-ID-IWp" secondAttribute="trailing" constant="190" id="hUz-qi-1ql"/>
                             <constraint firstItem="Y4w-Q2-P05" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-15" id="hoI-kj-Xmv"/>
                             <constraint firstItem="265-4p-cHz" firstAttribute="trailing" secondItem="ymZ-uS-6fa" secondAttribute="trailing" id="ibJ-fr-dMP"/>
                             <constraint firstItem="GzS-v4-m2V" firstAttribute="centerX" secondItem="ZCu-gW-vHg" secondAttribute="centerX" id="kc1-0L-5hB"/>
@@ -177,6 +183,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="player1HpLbl" destination="MVk-Vg-Rj2" id="elA-Uj-oJO"/>
+                        <outlet property="player1Orc" destination="Y4w-Q2-P05" id="a4Q-7B-zUk"/>
+                        <outlet property="player1Soldier" destination="WSA-WL-k2d" id="6cq-JE-OQs"/>
+                        <outlet property="player2HpLbl" destination="IX6-ID-IWp" id="8m3-MZ-BTb"/>
+                        <outlet property="player2Orc" destination="4yc-Xd-hi7" id="KVs-9R-4Rp"/>
+                        <outlet property="player2Soldier" destination="pxs-XK-tMC" id="bTi-SH-GCK"/>
+                        <outlet property="printLbl" destination="265-4p-cHz" id="gJC-Xy-ec0"/>
+                        <outlet property="selectOrcBtn" destination="VvL-ma-A6a" id="ihG-H3-bCd"/>
+                        <outlet property="selectSoldierBtn" destination="8qL-tq-nXe" id="qcl-RO-K4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
