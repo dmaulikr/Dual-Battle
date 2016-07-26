@@ -20,6 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2Orc: UIImageView!
     @IBOutlet weak var player2Soldier: UIImageView!
     
+    @IBOutlet weak var player1AttackBtn: UIButton!
+    @IBOutlet weak var player2AttackBtn: UIButton!
+    @IBOutlet weak var player1AttackLbl: UILabel!
+    @IBOutlet weak var player2AttackLbl: UILabel!
+    
     @IBOutlet weak var selectOrcBtn: UIButton!
     @IBOutlet weak var selectSoldierBtn: UIButton!
     
@@ -72,6 +77,15 @@ class ViewController: UIViewController {
         
         player2HpLbl.hidden = false
         player2HpLbl.text = "\(player2.HP) HP"
+        
+        revealAttackBtns()
+    }
+    
+    func revealAttackBtns() {
+        player1AttackBtn.hidden = false
+        player2AttackBtn.hidden = false
+        player1AttackLbl.hidden = false
+        player2AttackLbl.hidden = false
     }
   
 

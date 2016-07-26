@@ -184,9 +184,13 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="player1AttackBtn" destination="ftd-aw-hL3" id="n5k-Qa-n50"/>
+                        <outlet property="player1AttackLbl" destination="3OC-wa-TDp" id="87X-7p-eEh"/>
                         <outlet property="player1HpLbl" destination="MVk-Vg-Rj2" id="elA-Uj-oJO"/>
                         <outlet property="player1Orc" destination="Y4w-Q2-P05" id="a4Q-7B-zUk"/>
                         <outlet property="player1Soldier" destination="WSA-WL-k2d" id="6cq-JE-OQs"/>
+                        <outlet property="player2AttackBtn" destination="ZCu-gW-vHg" id="nf9-di-3cs"/>
+                        <outlet property="player2AttackLbl" destination="GzS-v4-m2V" id="Itf-QQ-W2L"/>
                         <outlet property="player2HpLbl" destination="IX6-ID-IWp" id="8m3-MZ-BTb"/>
                         <outlet property="player2Orc" destination="4yc-Xd-hi7" id="KVs-9R-4Rp"/>
                         <outlet property="player2Soldier" destination="pxs-XK-tMC" id="bTi-SH-GCK"/>
