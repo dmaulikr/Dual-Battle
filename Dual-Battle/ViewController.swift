@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//IBOutlets
+    
     @IBOutlet weak var printLbl: UILabel!
     @IBOutlet weak var player1HpLbl: UILabel!
     @IBOutlet weak var player2HpLbl: UILabel!
@@ -28,18 +30,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectOrcBtn: UIButton!
     @IBOutlet weak var selectSoldierBtn: UIButton!
     
+    
+//Variables
+    
     var player1: Character!
     var player2: Character!
+    
+    var currentAttackPower: Int = 15
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player1 = Character(startingHp: 100, attackPwr: 15)
-        player2 = Character(startingHp: 100, attackPwr: 15)
+        player1 = Character(startingHp: 100)
+        player2 = Character(startingHp: 100)
     
     
     }
+ 
+//IBActions
     
     @IBAction func onOrcSelected(sender: AnyObject) {
         if player1.type == "" {
@@ -64,7 +73,62 @@ class ViewController: UIViewController {
             initializeBattle()
         }
     }
+    
+    @IBAction func onPlayer1Attack(sender: UIButton) {
+        
+        currentAttackPower = player1.attackPwr
+        
+        player2.wasAttacked(currentAttackPower)
+        
+        if !player2.isAlive {
+            printLbl.text = "Player 2 was killed."
+            hidePlayer2()
+            
+            //Add restart functionality after time delay
+            
+        } else {
+            printLbl.text = "Player 2 lost \(currentAttackPower) HP"
+            player2HpLbl.text = "\(player2.HP) HP"
+            
+            player2AttackBtn.hidden = true
+            player2AttackLbl.hidden = true
+            
+            if player2.isAlive {
+            revealAttackBtnsDelay()
+            }
+        }
 
+    }
+    
+    @IBAction func onPlayer2Attack(sender:UIButton) {
+        
+        currentAttackPower = player2.attackPwr
+        
+        player1.wasAttacked(currentAttackPower)
+        
+        if !player1.isAlive {
+            printLbl.text = "Player 1 was killed."
+            hidePlayer1()
+            
+            //Add restart functionality after time delay
+            
+        } else {
+            printLbl.text = "Player 1 lost \(currentAttackPower) HP"
+            player1HpLbl.text = "\(player1.HP) HP"
+            
+            player1AttackBtn.hidden = true
+            player1AttackLbl.hidden = true
+            
+            if player1.isAlive {
+            revealAttackBtnsDelay()
+            }
+            
+            //attackpwr changes every time
+        }
+    }
+
+   
+//Functions
     
     func initializeBattle() {
         selectOrcBtn.hidden = true
@@ -87,7 +151,26 @@ class ViewController: UIViewController {
         player1AttackLbl.hidden = false
         player2AttackLbl.hidden = false
     }
+    
+    func hidePlayer2() {
+        player2Orc.hidden = true
+        player2Soldier.hidden = true
+        player2HpLbl.hidden = true
+        player2AttackLbl.hidden = true
+        player2AttackBtn.hidden = true
+    }
+    
+    func hidePlayer1() {
+        player1Orc.hidden = true
+        player1Soldier.hidden = true
+        player1HpLbl.hidden = true
+        player1AttackBtn.hidden = true
+        player1AttackLbl.hidden = true
+    }
+    
+    func revealAttackBtnsDelay() {
+        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: #selector(ViewController.revealAttackBtns), userInfo: nil, repeats: false)
+    }
   
-
 }
 

@@ -10,20 +10,22 @@ import Foundation
 
 class Character {
     private var _HP: Int = 0
-    private var _attackPwr: Int = 0
     private var _name: String = ""
+    
+    var attackPwrOptions: [Int] {
+        return [1, 4, 5, 6, 7, 8, 9, 10, 15, 20, 40]
+    }
+    
+    var attackPwr: Int {
+            let rand = Int(arc4random_uniform(UInt32(attackPwrOptions.count)))
+            return attackPwrOptions[rand]
+    }
     
     var type: String = ""
     
     var HP: Int {
         get {
             return _HP
-        }
-    }
-    
-    var attackPwr: Int {
-        get {
-            return _attackPwr
         }
     }
     
@@ -43,14 +45,12 @@ class Character {
         }
     }
     
-    init(startingHp: Int, attackPwr: Int) {
+    init(startingHp: Int) {
         self._HP = startingHp
-        self._attackPwr = attackPwr
     }
     
-    func attemptAttack(attackPwr: Int) -> Bool {
+    func wasAttacked(attackPwr: Int) {
         self._HP -= attackPwr
-        return true
     }
     
     

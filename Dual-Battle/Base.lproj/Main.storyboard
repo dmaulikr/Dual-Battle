@@ -69,6 +69,9 @@
                                     <constraint firstAttribute="height" constant="52" id="syV-Gm-1oD"/>
                                 </constraints>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayer1Attack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yz0-iL-OsV"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCu-gW-vHg" userLabel="player2-attack">
                                 <rect key="frame" x="379" y="214" width="140" height="52"/>
@@ -77,6 +80,9 @@
                                     <constraint firstAttribute="height" constant="52" id="GQ4-Gb-evT"/>
                                 </constraints>
                                 <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayer2Attack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="syY-ep-o1q"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ATTACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OC-wa-TDp" userLabel="player1-ATTACK-lbl">
                                 <rect key="frame" x="108" y="229" width="86" height="21"/>
