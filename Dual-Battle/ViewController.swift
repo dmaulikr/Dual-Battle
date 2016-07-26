@@ -30,6 +30,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectOrcBtn: UIButton!
     @IBOutlet weak var selectSoldierBtn: UIButton!
     
+    @IBOutlet weak var playAgainBtn: UIButton!
+    @IBOutlet weak var playAgainLbl: UILabel!
+    
     
 //Variables
     
@@ -84,7 +87,7 @@ class ViewController: UIViewController {
             printLbl.text = "Player 2 was killed."
             hidePlayer2()
             
-            //Add restart functionality after time delay
+            NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.goToReplayScreen), userInfo: nil, repeats: false)
             
         } else {
             printLbl.text = "Player 2 lost \(currentAttackPower) HP"
@@ -110,7 +113,7 @@ class ViewController: UIViewController {
             printLbl.text = "Player 1 was killed."
             hidePlayer1()
             
-            //Add restart functionality after time delay
+            NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.goToReplayScreen), userInfo: nil, repeats: false)
             
         } else {
             printLbl.text = "Player 1 lost \(currentAttackPower) HP"
@@ -125,6 +128,16 @@ class ViewController: UIViewController {
             
             //attackpwr changes every time
         }
+    }
+    
+    @IBAction func playAgain(sender: UIButton) {
+        playAgainLbl.hidden = true
+        playAgainBtn.hidden = true
+        selectOrcBtn.hidden = false
+        selectSoldierBtn.hidden = false
+        printLbl.text = "Player 1, select a character."
+        player1 = Character(startingHp: 100)
+        player2 = Character(startingHp: 100)
     }
 
    
@@ -170,6 +183,14 @@ class ViewController: UIViewController {
     
     func revealAttackBtnsDelay() {
         NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: #selector(ViewController.revealAttackBtns), userInfo: nil, repeats: false)
+    }
+    
+    func goToReplayScreen() {
+        printLbl.text = ""
+        hidePlayer1()
+        hidePlayer2()
+        playAgainBtn.hidden = false
+        playAgainLbl.hidden = false
     }
   
 }

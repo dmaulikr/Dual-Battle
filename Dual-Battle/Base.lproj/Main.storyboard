@@ -141,6 +141,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5i-bj-FQl" userLabel="PlayAgainBtn">
+                                <rect key="frame" x="194" y="353" width="212" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Jcp-Jr-WjG"/>
+                                    <constraint firstAttribute="height" constant="150" id="gtK-nW-0oi"/>
+                                </constraints>
+                                <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbA-MT-UGZ"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Play Again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9W-Cp-won">
+                                <rect key="frame" x="228" y="380" width="145" height="23"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,9 +166,11 @@
                             <constraint firstItem="WSA-WL-k2d" firstAttribute="top" secondItem="ftd-aw-hL3" secondAttribute="bottom" constant="-15" id="2gc-G5-Egj"/>
                             <constraint firstItem="3OC-wa-TDp" firstAttribute="centerX" secondItem="ftd-aw-hL3" secondAttribute="centerX" id="4yN-mO-TAN"/>
                             <constraint firstItem="4yc-Xd-hi7" firstAttribute="centerX" secondItem="pxs-XK-tMC" secondAttribute="centerX" id="5Eg-FJ-VwQ"/>
+                            <constraint firstItem="a9W-Cp-won" firstAttribute="centerY" secondItem="D5i-bj-FQl" secondAttribute="centerY" id="5IO-Oy-brc"/>
                             <constraint firstItem="lPb-Zm-JRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="13" id="5Q7-kE-vgq"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kwG-aV-Kpn" secondAttribute="bottom" id="BYi-2S-WYS"/>
                             <constraint firstItem="GzS-v4-m2V" firstAttribute="centerY" secondItem="ZCu-gW-vHg" secondAttribute="centerY" id="C9n-4Q-7Sg"/>
+                            <constraint firstItem="a9W-Cp-won" firstAttribute="centerX" secondItem="D5i-bj-FQl" secondAttribute="centerX" id="Cth-9s-dNO"/>
                             <constraint firstItem="kwG-aV-Kpn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CuX-ZN-jBq"/>
                             <constraint firstAttribute="trailing" secondItem="kwG-aV-Kpn" secondAttribute="trailing" id="Dj7-To-D6q"/>
                             <constraint firstItem="kwG-aV-Kpn" firstAttribute="top" secondItem="4yc-Xd-hi7" secondAttribute="bottom" id="Dzl-zv-bQk"/>
@@ -161,6 +180,7 @@
                             <constraint firstItem="MVk-Vg-Rj2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="210" id="MYI-yA-0Vb"/>
                             <constraint firstItem="3OC-wa-TDp" firstAttribute="centerY" secondItem="ftd-aw-hL3" secondAttribute="centerY" id="OzH-AF-srR"/>
                             <constraint firstItem="kwG-aV-Kpn" firstAttribute="top" secondItem="MVk-Vg-Rj2" secondAttribute="bottom" constant="140" id="PQI-ev-7Ju"/>
+                            <constraint firstItem="D5i-bj-FQl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UIP-1b-l8O"/>
                             <constraint firstItem="ymZ-uS-6fa" firstAttribute="top" secondItem="Y4w-Q2-P05" secondAttribute="bottom" constant="18" id="V3G-Vb-jaa"/>
                             <constraint firstItem="ymZ-uS-6fa" firstAttribute="top" secondItem="WSA-WL-k2d" secondAttribute="bottom" constant="13" id="WfJ-fP-dPi"/>
                             <constraint firstItem="ymZ-uS-6fa" firstAttribute="centerY" secondItem="kwG-aV-Kpn" secondAttribute="centerY" id="XvW-zS-fBv"/>
@@ -181,6 +201,7 @@
                             <constraint firstItem="WSA-WL-k2d" firstAttribute="centerX" secondItem="ftd-aw-hL3" secondAttribute="centerX" id="qmG-k4-VtM"/>
                             <constraint firstAttribute="trailing" secondItem="4yc-Xd-hi7" secondAttribute="trailing" constant="-20" id="rZ3-Yf-UcC"/>
                             <constraint firstItem="ZCu-gW-vHg" firstAttribute="centerX" secondItem="pxs-XK-tMC" secondAttribute="centerX" id="tqQ-eS-QDe"/>
+                            <constraint firstItem="D5i-bj-FQl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-45" id="vuK-XF-VhE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mqN-Zv-StP" secondAttribute="bottom" id="y4f-HV-iIt"/>
                         </constraints>
                         <variation key="default">
@@ -190,6 +211,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="playAgainBtn" destination="D5i-bj-FQl" id="ywY-3w-Ws7"/>
+                        <outlet property="playAgainLbl" destination="a9W-Cp-won" id="Rj0-5Q-ThK"/>
                         <outlet property="player1AttackBtn" destination="ftd-aw-hL3" id="n5k-Qa-n50"/>
                         <outlet property="player1AttackLbl" destination="3OC-wa-TDp" id="87X-7p-eEh"/>
                         <outlet property="player1HpLbl" destination="MVk-Vg-Rj2" id="elA-Uj-oJO"/>
